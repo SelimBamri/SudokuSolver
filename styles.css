@@ -62,3 +62,10 @@ h1 {
 .solved-cell {
   color: teal;
 }
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}

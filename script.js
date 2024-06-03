@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     console.log(solution);
     displaySolution(solution, gridString);
   });
+
+  document.getElementById("clear-button").addEventListener("click", clearBoard);
 });
 
 function handleArrowKeys(e) {
@@ -99,6 +101,18 @@ function displaySolution(solution, original) {
         input.value = solution[index];
         input.classList.add("solved-cell");
       }
+    }
+  }
+}
+
+function clearBoard() {
+  for (let row = 0; row < 9; row++) {
+    for (let col = 0; col < 9; col++) {
+      const input = document.querySelector(
+        `input[data-row="${row}"][data-col="${col}"]`
+      );
+      input.value = "";
+      input.classList.remove("solved-cell");
     }
   }
 }
